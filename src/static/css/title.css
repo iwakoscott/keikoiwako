@@ -1,0 +1,45 @@
+/* CSS: Title Component */
+
+.title-row {
+  background-image: url('../img/blur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.title {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: Ivory;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+#title-name {
+  font-size: 14vw;
+}
+
+#title-slidedown-icon {
+  font-size: 5em;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 415px) {
+
+  #title-name {
+    font-size: 25vw;
+  }
+
+  #title-slidedown-icon {
+    font-size: 4em;
+  }
+}
