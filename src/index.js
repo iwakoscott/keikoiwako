@@ -7,17 +7,36 @@ import Testimonials from './components/testimonials';
 import Contact from './components/contact';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import $ from 'jquery';
 
 class Website extends Component {
 
   constructor(){
     super();
-    this.state = {};
+    this.state = {
+      responseData: [],
+      apiSuccess: false
+    };
   } // Website.constructor
 
   componentWillMount(){
+    var self = this;
     /* Before mounting I want to make a call to the instagram API */
-    
+    $.ajax({
+      url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=6658228117.267de99.117ee32d6e3c4fb1a45b3a00539cc379',
+      datatype: "jsonp",
+      success: (response) => {
+        let data = response.data;
+        this.setState({
+          responseData: data,
+          apiSuccess: true
+        });
+      },
+      error: () => {
+        let apiSuccess = false;
+        this.setState({ apiSuccess });
+      }
+    });
   } // Website.componentWillMount
 
   render(){
