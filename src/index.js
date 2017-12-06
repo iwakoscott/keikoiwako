@@ -5,6 +5,7 @@ import Profile from './components/content';
 import AboutMe from './components/aboutme';
 import Testimonials from './components/testimonials';
 import Contact from './components/contact';
+import PhotoViewer from './components/photoViewer';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
@@ -19,7 +20,7 @@ class Website extends Component {
     };
   } // Website.constructor
 
-  componentWillMount(){
+  componentDidMount(){
     var self = this;
     /* Before mounting I want to make a call to the instagram API */
     $.ajax({
@@ -34,7 +35,7 @@ class Website extends Component {
       },
       error: () => {
         let apiSuccess = false;
-        this.setState({ apiSuccess });
+        self.setState({ apiSuccess });
       }
     });
   } // Website.componentWillMount
@@ -46,6 +47,7 @@ class Website extends Component {
         <Profile />
         <AboutMe />
         <Testimonials />
+        <PhotoViewer data={this.state.apiSuccess ? this.state.responseData : null}/>
         <Contact />
       </div>
     );
