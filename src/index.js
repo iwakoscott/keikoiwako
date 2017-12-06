@@ -10,6 +10,16 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 class Website extends Component {
 
+  constructor(){
+    super();
+    this.state = {};
+  } // Website.constructor
+
+  componentWillMount(){
+    /* Before mounting I want to make a call to the instagram API */
+    
+  } // Website.componentWillMount
+
   render(){
     return (
       <div className="container-fluid">

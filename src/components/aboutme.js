@@ -5,7 +5,7 @@ function AboutMe(){
   return (
     <div className="row content-content">
 
-      <div className="col-lg-4 content-box" id="who-am-i">
+      <div className="col-md-4 col-lg-4 content-box" id="who-am-i">
         <h1 className="box-title">{"Who am I?"}</h1>
         <p>
           {
@@ -17,7 +17,7 @@ function AboutMe(){
         </p>
       </div>
 
-      <div className="col-lg-4 content-box" id="my-interests">
+      <div className="col-md-4 col-lg-4 content-box" id="my-interests">
         <h1 className="box-title">{"My Interests?"}</h1>
         <p>
           {
@@ -28,7 +28,7 @@ function AboutMe(){
         </p>
       </div>
 
-      <div className="col-lg-4 content-box" id="my-philosophy">
+      <div className="col-md-4 col-lg-4 content-box" id="my-philosophy">
         <h1 className="box-title">{"My Philosophy?"}</h1>
         <p>
           {
