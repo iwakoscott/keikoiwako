@@ -1,0 +1,12 @@
+/* CSS: Contact Component */
+
+.contact-box {
+  padding: 50px;
+  text-align: center;
+  font-size: 27px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.user {
+  margin-top: 25px;
+}
