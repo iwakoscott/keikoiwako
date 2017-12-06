@@ -1,0 +1,38 @@
+/* CSS: Profile Component */
+
+.content-profile, .content-content {
+  font-family: 'Josefin Sans', sans-serif;
+  color: Ivory;
+}
+
+.content-profile {
+  background-color: #c0392b;
+}
+
+#content-profile-box, #content-quote-box {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#content-profile-pic {
+  max-width: 350px;
+  border-radius: 100%;
+}
+
+#content-quote {
+  font-size: 4em;
+}
+
+
+@media only screen and (max-width: 415px) {
+
+  #content-profile-pic {
+      width: 275px;
+  }
+
+  #content-quote {
+    font-size: 3em;
+  }
+
+}

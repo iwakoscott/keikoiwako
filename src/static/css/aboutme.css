@@ -1,0 +1,28 @@
+/* CSS: AboutMe Component */
+
+.box-title {
+  text-align: center;
+}
+
+#who-am-i {
+  background-color: #16a085;
+}
+
+#my-interests {
+  background-color: #27ae60;
+}
+
+#my-philosophy {
+  background-color: #f1c40f;
+}
+
+.content-content {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  font-size: 27px;
+}
+
+#who-am-i, #my-interests, #my-philosophy {
+  padding: 50px;
+}
