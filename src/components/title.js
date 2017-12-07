@@ -10,7 +10,8 @@ class Title extends Component {
   } // Title.constructor
 
   scrollPageDown(){
-    alert('Clicked!');
+    let target = document.getElementById('content-profile-box');
+    target.scrollIntoView();
   } // Title.scrollPageDown
 
   render(){
