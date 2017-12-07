@@ -2,11 +2,12 @@
 
 .insta-img {
   padding: 10px;
+  background-color: white;
 }
 
 .insta-img, figcaption {
   border-radius: 3px;
-  box-shadow: 3px 3px 2px grey;
+  box-shadow: 1px 3px 2px grey;
   margin-top: 10px;
   margin-top: 25px;
   margin-left: 0;
@@ -23,28 +24,23 @@ figcaption {
   padding: 25px;
 }
 
-.photo-viewer {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-}
-
-.button-row, .photo-box {
+.button-row, .photo-box, .photo-viewer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.photo-box {
-  background-color: ivory;
-}
-
 .button-row {
-  height: 50px;
-  margin-bottom: 40px;
+  height: 60px;
+  padding-bottom: 10px;
 }
 
-.follow-me {
-  box-shadow: 3px 3px 2px grey;
+.insta-btn {
+  box-shadow: 1px 3px 2px grey;
+  width: 285px;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.photo-viewer, .button-row {
+  background: antiquewhite;
 }

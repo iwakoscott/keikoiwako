@@ -51,7 +51,8 @@ class PhotoViewer extends Component {
           { this.renderPhotos(recentFour) }
         </div>
         <div className="row button-row">
-          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}} className="btn btn-primary btn-lg follow-me">see more on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
+          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}}
+                  className="btn btn-primary btn-lg insta-btn">see more on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
         </div>
       </div>
       );
@@ -60,7 +61,8 @@ class PhotoViewer extends Component {
     else {
       viewer = (
         <div className="row button-row">
-          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}} className="btn btn-primary">follow me on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
+          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}}
+                  className="btn btn-primary insta-btn">follow me on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
         </div>
       );
     }
