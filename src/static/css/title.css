@@ -6,7 +6,6 @@
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  z-index: -10;
 }
 
 .title {
@@ -46,6 +45,10 @@
 
   #title-slidedown-icon {
     font-size: 4em;
+  }
+
+  .title-row {
+    background-attachment: scroll;
   }
 
 }
