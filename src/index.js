@@ -46,8 +46,8 @@ class Website extends Component {
         <Title />
         <Profile />
         <AboutMe />
-        <Testimonials />
         <PhotoViewer data={this.state.apiSuccess ? this.state.responseData : null}/>
+        <Testimonials />
         <Contact />
       </div>
     );

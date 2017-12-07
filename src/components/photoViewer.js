@@ -9,24 +9,33 @@ class PhotoViewer extends Component {
       currentPhoto: 0
     };
 
-    this.renderPhoto = this.renderPhoto.bind(this);
+    this.renderPhotos = this.renderPhotos.bind(this);
   } // PhotoViewer.constructor
 
-  renderPhoto(object){
-    const imgURL = object.images.low_resolution.url;
-    const alt = object.caption ? object.caption.text : 'keiko.iwako';
-    const linkToInstaImg = object.link;
+  renderPhotos(objects){
 
-    return (
-      <div className="col-md-3 col-lg-3 photo-box">
-        <figure>
-          <a href={linkToInstaImg} target="_blank">
-            <img style={{'width': '300px', 'height': '300px'}} className="insta-img" src={imgURL} alt={alt} />
-          </a>
-          <figcaption style={{'width': '300px'}}><i className="fa fa-instagram fa-lg"></i> -- {alt}</figcaption>
-        </figure>
-      </div>
-    );
+    let formattedData = objects.map((object) => {
+      const photoID = object.id;
+      const imgURL = object.images.low_resolution.url;
+      const alt = object.caption ? object.caption.text : 'keiko.iwako';
+      const linkToInstaImg = object.link;
+      const dateObject = new Date(object.caption.created_time * 1000);
+      const comma = dateObject.toLocaleString().indexOf(',');
+      const date = dateObject.toLocaleString().slice(0, comma);
+
+      return (
+        <div key={photoID} className="col-md-4 col-lg-4 photo-box">
+          <figure>
+            <a href={linkToInstaImg} target="_blank">
+              <img style={{'width': '285px', 'height': '285px'}} className="insta-img" src={imgURL} alt={alt} />
+            </a>
+            <figcaption style={{'width': '285px'}}>{date}<br/>{alt}</figcaption>
+          </figure>
+        </div>
+      );
+    });
+
+    return formattedData;
   } // PhotoViewer.renderPhoto
 
   render(){
@@ -35,16 +44,17 @@ class PhotoViewer extends Component {
     var viewer;
 
     if (data) {
+      let recentFour = data.slice(0, 3);
       viewer = (
-        <div className="row">
-          {this.renderPhoto(data[this.state.currentPhoto])}
+        <div className="row photoViewer">
+          { this.renderPhotos(recentFour) }
         </div>
       );
     } // if we get some api data
 
     else {
       viewer = (
-        <div className="row">
+        <div className="row photoViewer">
           <button className="btn btn-success">follow me on Instagram</button>
         </div>
       );
