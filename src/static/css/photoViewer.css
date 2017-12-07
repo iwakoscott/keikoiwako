@@ -19,19 +19,32 @@ figcaption {
   background-color: #f2be71;
   text-align: center;
   font-family: 'Reenie Beanie', cursive;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   padding: 25px;
 }
 
-.photoViewer {
+.photo-viewer {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
 }
 
-.photo-box {
-  background-color: ivory;
+.button-row, .photo-box {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.photo-box {
+  background-color: ivory;
+}
+
+.button-row {
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.follow-me {
+  box-shadow: 3px 3px 2px grey;
+  font-family: 'Josefin Sans', sans-serif;
 }

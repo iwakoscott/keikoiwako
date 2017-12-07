@@ -46,16 +46,21 @@ class PhotoViewer extends Component {
     if (data) {
       let recentFour = data.slice(0, 3);
       viewer = (
-        <div className="row photoViewer">
+      <div>
+        <div className="row photo-viewer">
           { this.renderPhotos(recentFour) }
         </div>
+        <div className="row button-row">
+          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}} className="btn btn-primary btn-lg follow-me">see more on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
+        </div>
+      </div>
       );
     } // if we get some api data
 
     else {
       viewer = (
-        <div className="row photoViewer">
-          <button className="btn btn-success">follow me on Instagram</button>
+        <div className="row button-row">
+          <button onClick={() => {window.open('https://www.instagram.com/keiko.iwako/');}} className="btn btn-primary">follow me on <i className="fa fa-instagram fa-lg"></i> Instagram.</button>
         </div>
       );
     }
