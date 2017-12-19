@@ -19,7 +19,7 @@ class PhotoViewer extends Component {
       const imgURL = object.images.low_resolution.url;
       const alt = object.caption ? object.caption.text : 'keiko.iwako';
       const linkToInstaImg = object.link;
-      const dateObject = new Date(object.caption.created_time * 1000);
+      const dateObject = new Date(object.created_time * 1000);
       const comma = dateObject.toLocaleString().indexOf(',');
       const date = dateObject.toLocaleString().slice(0, comma);
 
